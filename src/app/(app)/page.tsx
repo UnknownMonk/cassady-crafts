@@ -15,7 +15,7 @@ const Page = async () => {
   })
   return (
     <>
-      <main>
+      {/* <main>
         <article>
           <Badge />
           <h1>Payload 3.0 - {payload?.config?.collections?.length} collections loaded</h1>{' '}
@@ -56,7 +56,7 @@ return <Pages data={data} />
             <li key={doc.id}>{doc.title ?? 'No title'}</li>
           ))}
         </ul>
-      </main>
+      </main> */}
       <Background />
     </>
   )
