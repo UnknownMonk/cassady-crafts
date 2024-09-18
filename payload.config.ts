@@ -35,8 +35,8 @@ export default buildConfig({
       slug: 'users',
       auth: true,
       access: {
-        delete: () => false,
-        update: () => false,
+        delete: () => true,
+        update: () => true,
       },
       fields: [],
     },
@@ -88,13 +88,14 @@ export default buildConfig({
     supportedLanguages: { en },
   },
 
-  admin: {
-    autoLogin: {
-      email: 'dev@payloadcms.com',
-      password: 'test',
-      prefillOnly: true,
-    },
-  },
+  // admin: {
+  //   autoLogin: {
+  //     email: 'dev@payloadcms.com',
+  //     password: 'test',
+  //     prefillOnly: true,
+  //   },
+  // },
+
   async onInit(payload) {
     const existingUsers = await payload.find({
       collection: 'users',
